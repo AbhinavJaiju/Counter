@@ -36,6 +36,7 @@
         var count = 0;
         const notPossible = "Invalid result";
         const UpCounter = () => {
+            count <= 0 ? count =0 :count;
             count = count + 1;
             document.querySelector(".result").innerHTML = count;
             count < 0 ? document.querySelector(".result").innerHTML = notPossible : count;
