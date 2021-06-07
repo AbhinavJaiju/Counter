@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css"> 
+    <title>
+    </title>
+</head>
+
+<body>
+    <p>
+    <h1 class="headerTag"> Counter</h1>
+    </p>
+    <div class="flexContainer">
+
+        <div clas="text-center">
+            <button class="buttonUp" type="button" onClick="UpCounter()">Up Count</button>
+        </div>
+        <div class="text-center">
+            <button class="buttonDown" type="button" onClick="DownCounter()">Down Count</button>
+        </div>
+    </div>
+    <br>
+    <div class="flexResult">
+        <p>
+        <h2 class="value"> Value: </h2>
+        </p>
+        <p>
+        <h2 class="result"> </h2>
+        </p>
+    </div>
+    <script>
+        var count = 0;
+        const notPossible = "Invalid result";
+        const UpCounter = () => {
+            count = count + 1;
+            document.querySelector(".result").innerHTML = count;
+            count < 0 ? document.querySelector(".result").innerHTML = notPossible : count;
+        };
+        const DownCounter = () => {
+            count -= 1;
+             document.querySelector(".result").innerHTML = count;
+            count < 0 ? document.querySelector(".result").innerHTML = notPossible : count; 
+        }
+    </script>
+
+</body>
+
+</html>
